@@ -3,13 +3,11 @@ const express = require('express');
 // router package
 const router = express.Router();
 
-const { home } = require('../controllers/auth-controller')
+const authController = require('../controllers/auth-controller')
 
-const { register } = require('../controllers/auth-controller')
-
-router.route("/").get(home);
+router.route("/").get(authController.home);
 
 // router getting 2nd style.
-router.route("/register").get(register)
+router.route("/register").post(authController.register)
 
 module.exports = router;
