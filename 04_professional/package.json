@@ -1,7 +1,7 @@
 {
   "name": "04_professional",
   "version": "1.0.0",
-  "description": "a backend domination with chai-and-dedication",
+  "description": "a backend domination with chai and dedication",
   "keywords": [
     "javascript",
     "backend",
@@ -10,11 +10,12 @@
   "license": "ISC",
   "author": "Sheeraz Hussain",
   "type": "module",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
-  },
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
+  "start": "node -r dotenv/config src/index.js"
+},
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cloudinary": "^2.9.0",
@@ -23,6 +24,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
+    "mime-types": "^3.0.2",
     "mongoose": "^9.1.5",
     "mongoose-aggregate-paginate-v2": "^1.1.4",
     "multer": "^2.0.2"
